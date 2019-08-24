@@ -14,8 +14,8 @@ final class AppFlowCoordinator: FlowCoordinator {
     }
 
     func initializeApp() {
-        let viewController = HelloWorldViewController(delegate: self)
-        rootViewController = UINavigationController(rootViewController: viewController)
+        let viewController = RecipesGeneratorViewController()
+        rootViewController = UINavigationController(rootViewController: viewController as UIViewController)
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }
