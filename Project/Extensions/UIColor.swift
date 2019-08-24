@@ -30,4 +30,5 @@ extension UIColor {
         }
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
+    static let defaultGreen = UIColor(hexString: "2AC503")
 }
