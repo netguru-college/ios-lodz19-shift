@@ -9,8 +9,10 @@ final class AppFlowCoordinator: FlowCoordinator {
 
     private let window: UIWindow
 
-    init(window: UIWindow) {
+    private let appDependencies: AppDependencies
+    init(window: UIWindow, appDependencies: AppDependencies) {
         self.window = window
+        self.appDependencies = appDependencies
     }
 
     func initializeApp() {
@@ -24,6 +26,7 @@ final class AppFlowCoordinator: FlowCoordinator {
 extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
 
     func didSelectNextButton() {
+        let recipeRequester = RecipeRequester(with: appDependencies.appClientForRecipes)
         let nextViewController = WelcomeViewController()
         rootViewController.show(nextViewController, sender: nil)
     }

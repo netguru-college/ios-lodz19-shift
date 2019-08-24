@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23FDF51E2311632D0082DC8B /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF51D2311632D0082DC8B /* AppDependencies.swift */; };
+		23FDF521231164D20082DC8B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF520231164D20082DC8B /* Recipe.swift */; };
+		23FDF5232311679C0082DC8B /* RecipeRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF5222311679C0082DC8B /* RecipeRequester.swift */; };
+		23FDF52723116A880082DC8B /* RecipeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF52623116A880082DC8B /* RecipeRequest.swift */; };
+		23FDF52A23117E790082DC8B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF52923117E790082DC8B /* Helper.swift */; };
 		2E5CB7214B4A78251C20EA48 /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */; };
 		696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE497217635CB005C9FDD /* AppDelegate.swift */; };
 		696FE49D217635CB005C9FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49B217635CB005C9FDD /* Main.storyboard */; };
@@ -38,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23FDF51D2311632D0082DC8B /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		23FDF520231164D20082DC8B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		23FDF5222311679C0082DC8B /* RecipeRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequester.swift; sourceTree = "<group>"; };
+		23FDF52623116A880082DC8B /* RecipeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequest.swift; sourceTree = "<group>"; };
+		23FDF52923117E790082DC8B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetguruCollegeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE494217635CB005C9FDD /* NetguruCollegeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetguruCollegeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE497217635CB005C9FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,9 +93,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23FDF51F231164B10082DC8B /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				23FDF5222311679C0082DC8B /* RecipeRequester.swift */,
+				23FDF52623116A880082DC8B /* RecipeRequest.swift */,
+			);
+			path = Recipes;
+			sourceTree = "<group>";
+		};
+		23FDF52823117DC60082DC8B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23FDF520231164D20082DC8B /* Recipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4EF6845F21E6435400DA50FC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				23FDF52823117DC60082DC8B /* Models */,
 				4EF6846021E6438300DA50FC /* Networking */,
 			);
 			path = Services;
@@ -98,6 +126,8 @@
 				E814F7E02310713600788FA9 /* APIError.swift */,
 				E814F7DE2310713600788FA9 /* APIMethod.swift */,
 				E814F7E12310713600788FA9 /* APIRequest.swift */,
+				23FDF52923117E790082DC8B /* Helper.swift */,
+				23FDF51F231164B10082DC8B /* Recipes */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -201,6 +231,7 @@
 			children = (
 				696FE497217635CB005C9FDD /* AppDelegate.swift */,
 				E814F7F42310719D00788FA9 /* AppFlowCoordinator.swift */,
+				23FDF51D2311632D0082DC8B /* AppDependencies.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -389,11 +420,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23FDF51E2311632D0082DC8B /* AppDependencies.swift in Sources */,
 				E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */,
+				23FDF5232311679C0082DC8B /* RecipeRequester.swift in Sources */,
+				23FDF521231164D20082DC8B /* Recipe.swift in Sources */,
 				696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */,
 				E814F7E22310713600788FA9 /* APIMethod.swift in Sources */,
 				E814F7E42310713600788FA9 /* APIError.swift in Sources */,
+				23FDF52A23117E790082DC8B /* Helper.swift in Sources */,
 				E814F7E92310714300788FA9 /* HelloWorldViewController.swift in Sources */,
+				23FDF52723116A880082DC8B /* RecipeRequest.swift in Sources */,
 				E814F7F12310716D00788FA9 /* WelcomeView.swift in Sources */,
 				E814F7E52310713600788FA9 /* APIRequest.swift in Sources */,
 				E814F7E32310713600788FA9 /* APIClient.swift in Sources */,

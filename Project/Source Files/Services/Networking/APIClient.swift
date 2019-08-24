@@ -7,14 +7,17 @@ import Foundation
 
 final class APIClient {
 
-    let baseURL = "https://cat-fact.herokuapp.com"
+    var baseURL: String
     let sessionConfiguration = URLSessionConfiguration.default
     lazy var session = URLSession(configuration: sessionConfiguration)
 
+    init(withURL baseURL: String) {
+        self.baseURL = baseURL
+    }
     /// Creates API request and sends it. Closures are run on main thread.
     ///
     /// - Parameters:
-    ///   - endpoint: endpoint to call
+    ///   - request: endpoint to call
     ///   - method: HTTP method
     ///   - urlParameters: url parameters
     ///   - success: closure, fires on success with optional data

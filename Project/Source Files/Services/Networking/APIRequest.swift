@@ -14,3 +14,13 @@ extension APIRequest {
     var parameters: [String: String]? { return nil }
     var headers: [String: String]? { return nil }
 }
+
+//struct ReciepiesRequest: APIRequest {
+//    var path: String {
+//        return"kdkd"
+//    }
+//
+//    var method: APIMethod
+//
+//
+//}
