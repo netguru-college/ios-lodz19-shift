@@ -14,7 +14,7 @@ struct Recipe {
 }
 
 extension Recipe: Codable {
-    enum RecipeCodingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case title = "title"
         case imageURL = "thumbnail"
         case ingredients = "ingredients"
@@ -30,7 +30,7 @@ struct Recipes {
 }
 
 extension Recipes: Codable {
-    enum Recipes: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case title = "title"
         case version = "version"
         case recipesURL = "href"
