@@ -52,7 +52,6 @@ extension RecipiesTableViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
-
     // TODO: Add func tableView - didSelectRow
 }
 
