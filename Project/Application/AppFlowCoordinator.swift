@@ -14,7 +14,8 @@ final class AppFlowCoordinator: FlowCoordinator {
     }
 
     func initializeApp() {
-        let viewController = RecipesGeneratorViewController()
+        // TODO: insert viewmodel from appdependencies
+        let viewController = RecipesGeneratorViewController(with: RecepiesGeneratorViewModel())
         rootViewController = UINavigationController(rootViewController: viewController as UIViewController)
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()

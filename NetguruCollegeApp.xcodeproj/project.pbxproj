@@ -135,7 +135,6 @@
 				19BB0566231178E700E4E342 /* RecipesGeneratorView.swift */,
 				19BB0567231178E700E4E342 /* RecipesGeneratorView.xib */,
 				19B182192312614B00CB5ECB /* RecepiesGeneratorViewModel.swift */,
-				19B1821B23126BAD00CB5ECB /* IngredientsModel.swift */,
 			);
 			path = RecipesGenerator;
 			sourceTree = "<group>";
@@ -144,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				19BB05712311C6E700E4E342 /* NSObject.swift */,
-				19B1821723125F8900CB5ECB /* NSObjectProtocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

@@ -11,4 +11,3 @@ internal extension NSObject {
         return namespaceClassName.components(separatedBy: ".").last!
     }
 }
-
