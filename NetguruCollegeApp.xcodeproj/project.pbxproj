@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		19B1821823125F8900CB5ECB /* NSObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B1821723125F8900CB5ECB /* NSObjectProtocol.swift */; };
+		19B1821A2312614B00CB5ECB /* RecepiesGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B182192312614B00CB5ECB /* RecepiesGeneratorViewModel.swift */; };
+		19B1821C23126BAD00CB5ECB /* IngredientsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B1821B23126BAD00CB5ECB /* IngredientsModel.swift */; };
 		19BB0568231178E700E4E342 /* RecipesGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0566231178E700E4E342 /* RecipesGeneratorView.swift */; };
 		19BB0569231178E700E4E342 /* RecipesGeneratorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BB0567231178E700E4E342 /* RecipesGeneratorView.xib */; };
 		19BB056B23117C8200E4E342 /* RecipesGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB056A23117C8200E4E342 /* RecipesGeneratorViewController.swift */; };
@@ -46,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		19B1821723125F8900CB5ECB /* NSObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocol.swift; sourceTree = "<group>"; };
+		19B182192312614B00CB5ECB /* RecepiesGeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepiesGeneratorViewModel.swift; sourceTree = "<group>"; };
+		19B1821B23126BAD00CB5ECB /* IngredientsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsModel.swift; sourceTree = "<group>"; };
 		19BB0566231178E700E4E342 /* RecipesGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesGeneratorView.swift; sourceTree = "<group>"; };
 		19BB0567231178E700E4E342 /* RecipesGeneratorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesGeneratorView.xib; sourceTree = "<group>"; };
 		19BB056A23117C8200E4E342 /* RecipesGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesGeneratorViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 				19BB056A23117C8200E4E342 /* RecipesGeneratorViewController.swift */,
 				19BB0566231178E700E4E342 /* RecipesGeneratorView.swift */,
 				19BB0567231178E700E4E342 /* RecipesGeneratorView.xib */,
+				19B182192312614B00CB5ECB /* RecepiesGeneratorViewModel.swift */,
+				19B1821B23126BAD00CB5ECB /* IngredientsModel.swift */,
 			);
 			path = RecipesGenerator;
 			sourceTree = "<group>";
@@ -436,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B1821C23126BAD00CB5ECB /* IngredientsModel.swift in Sources */,
 				E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */,
 				696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */,
 				E814F7E22310713600788FA9 /* APIMethod.swift in Sources */,
@@ -446,6 +453,7 @@
 				E814F7E52310713600788FA9 /* APIRequest.swift in Sources */,
 				E814F7E32310713600788FA9 /* APIClient.swift in Sources */,
 				E814F7E82310714300788FA9 /* WelcomeViewController.swift in Sources */,
+				19B1821A2312614B00CB5ECB /* RecepiesGeneratorViewModel.swift in Sources */,
 				E814F7F52310719E00788FA9 /* AppFlowCoordinator.swift in Sources */,
 				19B1821823125F8900CB5ECB /* NSObjectProtocol.swift in Sources */,
 				E814F7ED2310716000788FA9 /* HelloWorldView.swift in Sources */,
