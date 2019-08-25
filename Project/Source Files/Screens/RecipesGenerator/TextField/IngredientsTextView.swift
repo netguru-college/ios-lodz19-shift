@@ -18,7 +18,7 @@ class IngredientsTextView: UIView {
     weak var delegate: IngredientsTextViewDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
-//        ingredientsTextField.delegate = self
+        ingredientsTextField.delegate = self
     }
     class func instanceFromNib() -> UIView {
         return UINib(nibName: "IngredientsTextView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView

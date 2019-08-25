@@ -11,9 +11,6 @@ final class RecipesGeneratorViewController: UIViewController {
     }
     private var observations = [NSKeyValueObservation]()
 
-
-    
-
     // MARK: - Functions
     init(with vm: RecepiesGeneratorViewModel) {
         self.recepiesGeneratorViewModel = vm
@@ -32,8 +29,7 @@ final class RecipesGeneratorViewController: UIViewController {
         let nib = UINib(nibName: IngredientCell.className, bundle: nil)
         customView.tableView!.register(nib, forCellReuseIdentifier: IngredientCell.className)
         recepiesGeneratorViewModel.delegate = self
-        customView.ingredientTextView.delegate = self
-//        customView.ingredientTextView.ingredientsTextField.delegate = customView.ingredientTextView
+        customView.addBar.delegate = self
     }
 }
 
@@ -56,6 +52,17 @@ extension RecipesGeneratorViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - Mocked textView
+extension RecipesGeneratorViewController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            guard let newIngredient = textView.text  else { return false }
+            recepiesGeneratorViewModel.shouldAdd(newIngredient: newIngredient)
+        }
+        return true
+    }
+}
+
 extension RecipesGeneratorViewController: RecepiesGeneratorViewModelDelegate {
     func willChangeData() {
         customView.tableView.beginUpdates()
@@ -69,11 +76,4 @@ extension RecipesGeneratorViewController: RecepiesGeneratorViewModelDelegate {
         customView.tableView.endUpdates()
     }
 
-}
-
-extension RecipesGeneratorViewController: IngredientsTextViewDelegate {
-    func didAddIngridient(_ view: IngredientsTextView, text: String) {
-        recepiesGeneratorViewModel.shouldAdd(newIngredient: text)
-
-    }
 }
