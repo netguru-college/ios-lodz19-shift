@@ -9,7 +9,7 @@ protocol RecipesGeneratorViewControllerDelegate: class {
 }
 
 final class RecipesGeneratorViewController: UIViewController {
-    private let recepiesGeneratorViewModel: RecepiesGeneratorViewModel
+    private let viewModel: RecepiesGeneratorViewModel
     private var customView: RecipesGeneratorView {
         return view as! RecipesGeneratorView
     }
@@ -18,7 +18,7 @@ final class RecipesGeneratorViewController: UIViewController {
     weak var delegate: RecipesGeneratorViewControllerDelegate?
     // MARK: - Functions
     init(with vm: RecepiesGeneratorViewModel, delegate: RecipesGeneratorViewControllerDelegate) {
-        self.recepiesGeneratorViewModel = vm
+        self.viewModel = vm
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
         self.title = "Ingredients"
@@ -34,7 +34,7 @@ final class RecipesGeneratorViewController: UIViewController {
         customView.tableView.dataSource = self
         let nib = UINib(nibName: IngredientCell.className, bundle: nil)
         customView.tableView!.register(nib, forCellReuseIdentifier: IngredientCell.className)
-        recepiesGeneratorViewModel.delegate = self
+        viewModel.delegate = self
         customView.addBar.delegate = self
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.didTapDoneBarButtonItem))
@@ -57,17 +57,17 @@ final class RecipesGeneratorViewController: UIViewController {
 //    }
 
     @objc private func didTapDoneBarButtonItem() {
-        delegate?.didFinishTypingIngridients(recepiesGeneratorViewModel.ingredients)
+        delegate?.didFinishTypingIngridients(viewModel.ingredients)
     }
 }
 
 extension RecipesGeneratorViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recepiesGeneratorViewModel.ingredients.count
+        return viewModel.ingredients.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: IngredientCell.className) as! IngredientCell
-        cell.ingredientLabel.text = recepiesGeneratorViewModel.ingredients[indexPath.item]
+        cell.ingredientLabel.text = viewModel.ingredients[indexPath.item]
         return cell
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -76,7 +76,7 @@ extension RecipesGeneratorViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    commit editingStyle: UITableViewCell.EditingStyle,
                    forRowAt indexPath: IndexPath) {
-        recepiesGeneratorViewModel.shouldRemoveIngredient(at: indexPath)
+        viewModel.shouldRemoveIngredient(at: indexPath)
     }
 }
 
@@ -86,7 +86,7 @@ extension RecipesGeneratorViewController: UITextViewDelegate {
         if text == "\n" {
             guard let newIngredient = textView.text  else { return false }
             textView.text = ""
-            recepiesGeneratorViewModel.shouldAdd(newIngredient: newIngredient)
+            viewModel.shouldAdd(newIngredient: newIngredient)
         }
         return true
     }
