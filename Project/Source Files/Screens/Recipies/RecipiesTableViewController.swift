@@ -11,10 +11,10 @@ class RecipiesTableViewController: UIViewController {
 
     // TODO: Remove when the API implementation will be ready.
     var recepies = [
-        Recipe(image: UIImage(named: "TestingImage")!,
+        Recipe(imageUrl: URL(string: "http://static.food2fork.com/avocadomacandcheesedc99.jpg")!,
                title: "Let's cook something",
                ingredients: "Garlic, beef, salt, Garlic, beef, salt, Garlic, beef, salt"),
-        Recipe(image: UIImage(named: "TestingImage2")!,
+        Recipe(imageUrl: URL(string: "http://static.food2fork.com/avocadomacandcheesedc99.jpg")!,
                title: "Another cool recipe",
                ingredients: "Mango, Melon, Water")
     ]
@@ -43,7 +43,7 @@ extension RecipiesTableViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: RecipiesTableViewCell.identifier,
                                                  for: indexPath) as! RecipiesTableViewCell
 
-        cell.setup(with: recepies[indexPath.row].image,
+        cell.setup(with: recepies[indexPath.row].imageUrl,
                    title: recepies[indexPath.row].title,
                    ingredients: recepies[indexPath.row].ingredients)
         return cell
@@ -58,11 +58,11 @@ extension RecipiesTableViewController: UITableViewDelegate, UITableViewDataSourc
 
 // TODO: Remove when the API implementation will be ready.
 public class Recipe {
-    public var image: UIImage
+    public var imageUrl: URL
     public var title: String
     public var ingredients: String
-    init(image: UIImage, title: String, ingredients: String) {
-        self.image = image
+    init(imageUrl: URL, title: String, ingredients: String) {
+        self.imageUrl = imageUrl
         self.title = title
         self.ingredients = ingredients
     }
