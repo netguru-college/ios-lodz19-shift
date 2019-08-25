@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19BB056323115DF000E4E342 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB056223115DF000E4E342 /* UIColor+Extension.swift */; };
 		23AAB1EC23128EFC002D766D /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AAB1EB23128EFC002D766D /* Recipes.swift */; };
 		23FDF51E2311632D0082DC8B /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF51D2311632D0082DC8B /* AppDependencies.swift */; };
 		23FDF521231164D20082DC8B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF520231164D20082DC8B /* Recipe.swift */; };
 		23FDF5232311679C0082DC8B /* RecipeRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF5222311679C0082DC8B /* RecipeRequester.swift */; };
 		23FDF52723116A880082DC8B /* RecipeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF52623116A880082DC8B /* RecipeRequest.swift */; };
-		28FBD8E32312988F00B0558B /* IngredientsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBD8E12312988F00B0558B /* IngredientsTextView.swift */; };
-		28FBD8E42312988F00B0558B /* IngredientsTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28FBD8E22312988F00B0558B /* IngredientsTextView.xib */; };
-		19BB056323115DF000E4E342 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB056223115DF000E4E342 /* UIColor+Extension.swift */; };
+		28FBD8E32312988F00B0558B /* (null) in Sources */ = {isa = PBXBuildFile; };
+		28FBD8E42312988F00B0558B /* (null) in Resources */ = {isa = PBXBuildFile; };
 		2E5CB7214B4A78251C20EA48 /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */; };
 		696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE497217635CB005C9FDD /* AppDelegate.swift */; };
 		696FE49D217635CB005C9FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49B217635CB005C9FDD /* Main.storyboard */; };
@@ -25,6 +25,7 @@
 		755EBEEA231162210017A910 /* RecipiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755EBEE9231162200017A910 /* RecipiesTableViewController.swift */; };
 		755EBEEF231169540017A910 /* RecipiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 755EBEED231169540017A910 /* RecipiesTableViewCell.swift */; };
 		755EBEF0231169540017A910 /* RecipiesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 755EBEEE231169540017A910 /* RecipiesTableViewCell.xib */; };
+		758E86872312B65C0059DD3D /* RecipiesTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758E86862312B65C0059DD3D /* RecipiesTableViewModel.swift */; };
 		E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7DC2310712B00788FA9 /* FlowCoordinator.swift */; };
 		E814F7E22310713600788FA9 /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7DE2310713600788FA9 /* APIMethod.swift */; };
 		E814F7E32310713600788FA9 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E814F7DF2310713600788FA9 /* APIClient.swift */; };
@@ -50,12 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19BB056223115DF000E4E342 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		23AAB1EB23128EFC002D766D /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		23FDF51D2311632D0082DC8B /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		23FDF520231164D20082DC8B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		23FDF5222311679C0082DC8B /* RecipeRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequester.swift; sourceTree = "<group>"; };
 		23FDF52623116A880082DC8B /* RecipeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequest.swift; sourceTree = "<group>"; };
-		19BB056223115DF000E4E342 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetguruCollegeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE494217635CB005C9FDD /* NetguruCollegeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetguruCollegeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE497217635CB005C9FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +72,7 @@
 		755EBEE9231162200017A910 /* RecipiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesTableViewController.swift; sourceTree = "<group>"; };
 		755EBEED231169540017A910 /* RecipiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesTableViewCell.swift; sourceTree = "<group>"; };
 		755EBEEE231169540017A910 /* RecipiesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipiesTableViewCell.xib; sourceTree = "<group>"; };
+		758E86862312B65C0059DD3D /* RecipiesTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipiesTableViewModel.swift; sourceTree = "<group>"; };
 		B70CCCFD923A49BB70EE7D09 /* Pods-NetguruCollegeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetguruCollegeApp.release.xcconfig"; path = "Target Support Files/Pods-NetguruCollegeApp/Pods-NetguruCollegeApp.release.xcconfig"; sourceTree = "<group>"; };
 		E814F7DC2310712B00788FA9 /* FlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		E814F7DE2310713600788FA9 /* APIMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMethod.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19BB056123115D4B00E4E342 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				19BB056223115DF000E4E342 /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		23FDF51F231164B10082DC8B /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,14 +131,6 @@
 				23AAB1EB23128EFC002D766D /* Recipes.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		19BB056123115D4B00E4E342 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				19BB056223115DF000E4E342 /* UIColor+Extension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4EF6845F21E6435400DA50FC /* Services */ = {
@@ -217,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				755EBEE6231161620017A910 /* Recipies */,
-				28FBD8E02312986D00B0558B /* Text field */,
 				E814F7EB2310714E00788FA9 /* Welcome */,
 				E814F7EA2310714500788FA9 /* HelloWorld */,
 			);
@@ -266,6 +267,7 @@
 				755EBEE7231161E70017A910 /* RecipiesTableViewController.xib */,
 				755EBEED231169540017A910 /* RecipiesTableViewCell.swift */,
 				755EBEEE231169540017A910 /* RecipiesTableViewCell.xib */,
+				758E86862312B65C0059DD3D /* RecipiesTableViewModel.swift */,
 			);
 			path = Recipies;
 			sourceTree = "<group>";
@@ -390,7 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				755EBEF0231169540017A910 /* RecipiesTableViewCell.xib in Resources */,
-				28FBD8E42312988F00B0558B /* IngredientsTextView.xib in Resources */,
+				28FBD8E42312988F00B0558B /* (null) in Resources */,
 				696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */,
 				E814F7F32310717400788FA9 /* WelcomeView.xib in Resources */,
 				755EBEE8231161E70017A910 /* RecipiesTableViewController.xib in Resources */,
@@ -458,11 +460,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				23FDF51E2311632D0082DC8B /* AppDependencies.swift in Sources */,
-				28FBD8E32312988F00B0558B /* IngredientsTextView.swift in Sources */,
+				28FBD8E32312988F00B0558B /* (null) in Sources */,
 				E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */,
 				23FDF5232311679C0082DC8B /* RecipeRequester.swift in Sources */,
 				23AAB1EC23128EFC002D766D /* Recipes.swift in Sources */,
 				23FDF521231164D20082DC8B /* Recipe.swift in Sources */,
+				758E86872312B65C0059DD3D /* RecipiesTableViewModel.swift in Sources */,
 				755EBEEF231169540017A910 /* RecipiesTableViewCell.swift in Sources */,
 				19BB056323115DF000E4E342 /* UIColor+Extension.swift in Sources */,
 				696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */,
