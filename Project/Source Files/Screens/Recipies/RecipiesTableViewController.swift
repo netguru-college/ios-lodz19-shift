@@ -24,7 +24,7 @@ class RecipiesTableViewController: UIViewController {
         setupView()
     }
     private func setupView() {
-        tableView.register(UINib(nibName: "RecipiesTableViewCell", bundle: nil),
+        tableView.register(UINib(nibName: RecipiesTableViewCell.identifier, bundle: nil),
                            forCellReuseIdentifier: RecipiesTableViewCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
