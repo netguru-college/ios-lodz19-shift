@@ -4,6 +4,10 @@
 //
 import UIKit
 
+protocol RecipesGeneratorViewControllerDelegate: class {
+    func didFinishTypingIngridients(_ items: [String])
+}
+
 final class RecipesGeneratorViewController: UIViewController {
     private let recepiesGeneratorViewModel: RecepiesGeneratorViewModel
     private var customView: RecipesGeneratorView {
@@ -11,9 +15,11 @@ final class RecipesGeneratorViewController: UIViewController {
     }
     private var observations = [NSKeyValueObservation]()
 
+    weak var delegate: RecipesGeneratorViewControllerDelegate?
     // MARK: - Functions
-    init(with vm: RecepiesGeneratorViewModel) {
+    init(with vm: RecepiesGeneratorViewModel, delegate: RecipesGeneratorViewControllerDelegate) {
         self.recepiesGeneratorViewModel = vm
+        self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
         self.title = "Ingredients"
     }
@@ -30,6 +36,28 @@ final class RecipesGeneratorViewController: UIViewController {
         customView.tableView!.register(nib, forCellReuseIdentifier: IngredientCell.className)
         recepiesGeneratorViewModel.delegate = self
         customView.addBar.delegate = self
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.didTapDoneBarButtonItem))
+
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+//    @objc func keyboardWillShow(notification: NSNotification) {
+//        guard let userInfo = notification.userInfo else { return }
+//        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+//        let keyboardFrame = keyboardSize.cgRectValue
+//        if self.customView.bottomBarConstraint.constant == 42 {
+//            self.customView.bottomBarConstraint.constant += keyboardFrame.height
+//        }
+//    }
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//        if self.view.frame.origin.y != 0 {
+//            self.customView.bottomBarConstraint.constant = 42
+//        }
+//    }
+
+    @objc private func didTapDoneBarButtonItem() {
+        delegate?.didFinishTypingIngridients(recepiesGeneratorViewModel.ingredients)
     }
 }
 
@@ -43,7 +71,7 @@ extension RecipesGeneratorViewController: UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        return false
     }
     func tableView(_ tableView: UITableView,
                    commit editingStyle: UITableViewCell.EditingStyle,
@@ -57,6 +85,7 @@ extension RecipesGeneratorViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
             guard let newIngredient = textView.text  else { return false }
+            textView.text = ""
             recepiesGeneratorViewModel.shouldAdd(newIngredient: newIngredient)
         }
         return true
