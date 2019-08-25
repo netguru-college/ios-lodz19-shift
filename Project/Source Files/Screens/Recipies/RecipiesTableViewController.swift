@@ -40,7 +40,7 @@ extension RecipiesTableViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipiesTableViewCell",
+        let cell = tableView.dequeueReusableCell(withIdentifier: RecipiesTableViewCell.identifier,
                                                  for: indexPath) as! RecipiesTableViewCell
 
         cell.setup(with: recepies[indexPath.row].image,
