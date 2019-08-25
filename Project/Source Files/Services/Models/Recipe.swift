@@ -5,6 +5,7 @@
 
 import Foundation
 
+/// Model for retrived data from API.
 struct Recipe {
     let title: String
     let imageURL: String
