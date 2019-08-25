@@ -8,9 +8,8 @@ import Foundation
 struct Recipe {
     let title: String
     let imageURL: String
-    let ingredients: [String]
+    let ingredients: String
     let recipeURL: String
-   
 }
 
 extension Recipe: Codable {
@@ -24,7 +23,7 @@ extension Recipe: Codable {
 
 struct Recipes {
     let title: String
-    let version: String
+    let version: Float
     let recipesURL: String
     let recipes: [Recipe]
 }

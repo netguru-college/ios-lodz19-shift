@@ -36,8 +36,9 @@ class HelloWorldViewController: UIViewController {
         super.viewDidLoad()
         customView.nextButton.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
         let apiClient = AppDependencies.init().appClientForRecipes
-        let recipes = RecipeRequester(with: apiClient).fetchRecipes(for: ["onion"])
-        print(recipes)
+        let recipes = RecipeRequester(with: apiClient).fetchRecipes(for: ["onions"], handler: { (recipes) in
+            print(recipes)
+        })
     }
 
     @objc func nextAction() {
