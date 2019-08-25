@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23AAB1EC23128EFC002D766D /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AAB1EB23128EFC002D766D /* Recipes.swift */; };
 		23FDF51E2311632D0082DC8B /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF51D2311632D0082DC8B /* AppDependencies.swift */; };
 		23FDF521231164D20082DC8B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF520231164D20082DC8B /* Recipe.swift */; };
 		23FDF5232311679C0082DC8B /* RecipeRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF5222311679C0082DC8B /* RecipeRequester.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23AAB1EB23128EFC002D766D /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		23FDF51D2311632D0082DC8B /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		23FDF520231164D20082DC8B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		23FDF5222311679C0082DC8B /* RecipeRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequester.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				23FDF520231164D20082DC8B /* Recipe.swift */,
+				23AAB1EB23128EFC002D766D /* Recipes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				23FDF51E2311632D0082DC8B /* AppDependencies.swift in Sources */,
 				E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */,
 				23FDF5232311679C0082DC8B /* RecipeRequester.swift in Sources */,
+				23AAB1EC23128EFC002D766D /* Recipes.swift in Sources */,
 				23FDF521231164D20082DC8B /* Recipe.swift in Sources */,
 				696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */,
 				E814F7E22310713600788FA9 /* APIMethod.swift in Sources */,
