@@ -17,14 +17,11 @@
 		19BB056E231186D700E4E342 /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB056C231186D700E4E342 /* IngredientCell.swift */; };
 		19BB056F231186D700E4E342 /* IngredientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BB056D231186D700E4E342 /* IngredientCell.xib */; };
 		19BB05722311C6E700E4E342 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB05712311C6E700E4E342 /* NSObject.swift */; };
-		28FBD8E42312988F00B0558B /* (null) in Resources */ = {isa = PBXBuildFile; };
 		23AAB1EC23128EFC002D766D /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AAB1EB23128EFC002D766D /* Recipes.swift */; };
 		23FDF51E2311632D0082DC8B /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF51D2311632D0082DC8B /* AppDependencies.swift */; };
 		23FDF521231164D20082DC8B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF520231164D20082DC8B /* Recipe.swift */; };
 		23FDF5232311679C0082DC8B /* RecipeRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF5222311679C0082DC8B /* RecipeRequester.swift */; };
 		23FDF52723116A880082DC8B /* RecipeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF52623116A880082DC8B /* RecipeRequest.swift */; };
-		28FBD8E32312988F00B0558B /* (null) in Sources */ = {isa = PBXBuildFile; };
-		28FBD8E42312988F00B0558B /* (null) in Resources */ = {isa = PBXBuildFile; };
 		2E5CB7214B4A78251C20EA48 /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */; };
 		696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE497217635CB005C9FDD /* AppDelegate.swift */; };
 		696FE49D217635CB005C9FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49B217635CB005C9FDD /* Main.storyboard */; };
@@ -427,7 +424,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = Netguru;
 				TargetAttributes = {
 					696FE493217635CB005C9FDD = {
@@ -463,9 +460,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28FBD8E42312988F00B0558B /* (null) in Resources */,
 				755EBEF0231169540017A910 /* RecipiesTableViewCell.xib in Resources */,
-				28FBD8E42312988F00B0558B /* (null) in Resources */,
 				696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */,
 				19BB0569231178E700E4E342 /* RecipesGeneratorView.xib in Resources */,
 				E814F7F32310717400788FA9 /* WelcomeView.xib in Resources */,
@@ -536,7 +531,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				23FDF51E2311632D0082DC8B /* AppDependencies.swift in Sources */,
-				28FBD8E32312988F00B0558B /* (null) in Sources */,
 				E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */,
 				23FDF5232311679C0082DC8B /* RecipeRequester.swift in Sources */,
 				23AAB1EC23128EFC002D766D /* Recipes.swift in Sources */,
