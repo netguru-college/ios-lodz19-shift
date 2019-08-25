@@ -10,8 +10,8 @@ final class RecipeRequest: APIRequest {
     var method: APIMethod {
         return .get
     }
-    var parameters: [String : String]?
+    var parameters: [String: String]?
     init(with ingredients: [String]) {
-        self.parameters = ["i" : Helper().convertToOneString(array: ingredients, with: ",")]
+        self.parameters = ["i": Helper().convertToOneString(array: ingredients, with: ",")]
     }
 }

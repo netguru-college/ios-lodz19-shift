@@ -15,10 +15,10 @@ struct RecipeRequester {
         let request = RecipeRequest(with: ingredients)
         apiClient.sendRequestAndDecode(
             request: request,
-            success:  { (data: Recipes) in
+            success: { (data: Recipes) in
                 handler(data)
-            }) { (error) in
-                print("Something went wrong: \(error?.localizedDescription)")
+            }) { error in
+                print("Something went wrong: \(error!.localizedDescription)")
         }
     }
 }

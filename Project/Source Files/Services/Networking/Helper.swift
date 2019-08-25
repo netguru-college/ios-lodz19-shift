@@ -3,7 +3,6 @@
 //  NetguruCollegeApp
 //
 
-
 import Foundation
 struct Helper {
     func convertToOneString(array: [String], with separator: String) -> String {
