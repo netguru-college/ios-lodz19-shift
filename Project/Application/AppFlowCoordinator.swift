@@ -27,7 +27,7 @@ final class AppFlowCoordinator: FlowCoordinator {
 extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
 
     func didSelectNextButton() {
-        let recipeRequester = RecipeRequester(with: appDependencies.appClientForRecipes)
+        let recipeRequester = RecipeRequester(with: appDependencies.reciepesAPIClient)
         let nextViewController = WelcomeViewController()
         rootViewController.show(nextViewController, sender: nil)
     }
