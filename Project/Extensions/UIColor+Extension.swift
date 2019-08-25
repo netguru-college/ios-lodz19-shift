@@ -7,7 +7,7 @@ import UIKit
 extension UIColor {
     
     static let defaultGreen = UIColor.with(hex: 0x2AC503)
-    static let defaultDarkerGreen = UIColor.with(hex: 0x21A700)
+    static let defaultDarkGreen = UIColor.with(hex: 0x21A700)
     
     /// Return an instance of UIColors from a given hex number
     /// Parameter hex: The hex value of the color object.
