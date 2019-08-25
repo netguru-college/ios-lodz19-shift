@@ -8,6 +8,7 @@ import Foundation
 protocol RecepiesGeneratorViewModelDelegate: class {
     func willChangeData()
     func insertData(at indexPath: IndexPath)
+    func deleteData(at indexPath: IndexPath)
     func didChangeData()
 }
 class RecepiesGeneratorViewModel {
@@ -25,7 +26,7 @@ class RecepiesGeneratorViewModel {
         assert(indexPath.section == 0, "There aren't any other section than first one")
         delegate?.willChangeData()
         ingredients.remove(at: indexPath.row)
-//        delegate?.insertData()
+        delegate?.deleteData(at: indexPath)
         delegate?.didChangeData()
     }
 

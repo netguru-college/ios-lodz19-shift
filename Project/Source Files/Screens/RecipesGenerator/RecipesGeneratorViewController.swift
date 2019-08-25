@@ -71,7 +71,7 @@ extension RecipesGeneratorViewController: UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return false
+        return true
     }
     func tableView(_ tableView: UITableView,
                    commit editingStyle: UITableViewCell.EditingStyle,
@@ -99,6 +99,10 @@ extension RecipesGeneratorViewController: RecepiesGeneratorViewModelDelegate {
 
     func insertData(at indexPath: IndexPath) {
         customView.tableView.insertRows(at: [indexPath], with: .bottom)
+    }
+
+    func deleteData(at indexPath: IndexPath) {
+        customView.tableView.deleteRows(at: [indexPath], with: .automatic)
     }
 
     func didChangeData() {
