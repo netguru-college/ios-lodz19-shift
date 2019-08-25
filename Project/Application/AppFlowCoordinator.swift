@@ -9,8 +9,11 @@ final class AppFlowCoordinator: FlowCoordinator {
 
     private let window: UIWindow
 
-    init(window: UIWindow) {
+    /// Passing AppDependencies to the AppFlowCoordinator
+    private let appDependencies: AppDependencies
+    init(window: UIWindow, appDependencies: AppDependencies) {
         self.window = window
+        self.appDependencies = appDependencies
     }
 
     func initializeApp() {
