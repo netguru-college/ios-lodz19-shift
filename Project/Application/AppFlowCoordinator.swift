@@ -32,6 +32,7 @@ extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
 
 extension AppFlowCoordinator: RecipesGeneratorViewControllerDelegate {
     func didFinishTypingIngridients(_ items: [String]) {
+        print("coooo")
 
     }
 }
