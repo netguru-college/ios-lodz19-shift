@@ -46,7 +46,8 @@ extension RecipiesTableViewController: UITableViewDelegate, UITableViewDataSourc
                                                  for: indexPath) as! RecipiesTableViewCell
         cell.recipeImage.image = dataBase[indexPath.row].image
         cell.recipeTitle.text = dataBase[indexPath.row].title
-        cell.recipeIngredients.text = dataBase[indexPath.row].ingredients
+        let ingredients = createAttributedIngredientsLabel(ingredients: dataBase[indexPath.row].ingredients)
+        cell.recipeIngredients.attributedText = ingredients
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -55,14 +56,13 @@ extension RecipiesTableViewController: UITableViewDelegate, UITableViewDataSourc
 
 }
 
-
-func createAttributedIngredientsLabel(ingredients: String)->NSMutableAttributedString {
+func createAttributedIngredientsLabel(ingredients: String) -> NSMutableAttributedString {
     let boldText = "Ingredients: "
-    let attributes = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15)]
-    var attributedString = NSMutableAttributedString(string:boldText, attributes:attributes)
-    
+    let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15)]
+    let attributedString = NSMutableAttributedString(string: boldText, attributes: attributes)
+
     let normalText = ingredients
-    let normalString = NSMutableAttributedString(string:normalText)
+    let normalString = NSMutableAttributedString(string: normalText)
     attributedString.append(normalString)
     return attributedString
 }
