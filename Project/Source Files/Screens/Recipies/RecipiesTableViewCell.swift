@@ -48,15 +48,13 @@ class RecipiesTableViewCell: UITableViewCell {
 }
 
 extension UIImageView {
-    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     func downloadImage(from url: URL) {
-        getData(from: url) {
-            data, response, error in
+        getData(from: url) { data, response, error in
             guard let data = data, error == nil else {
                 self.image = UIImage(named: "RecipeIcon")
-                print(error?.localizedDescription)
                 return
             }
             DispatchQueue.main.async() {
