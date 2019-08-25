@@ -14,6 +14,12 @@ class RecipiesTableViewCell: UITableViewCell {
         return "RecipiesTableViewCell"
     }
 
+    /// Sets up a cell.
+    ///
+    /// - Parameters:
+    ///   - image: an image of the recipe from URL source
+    ///   - title: title of a recipe
+    ///   - ingredients: ingredients used in a recipe
     func setup(with image: UIImage, title: String, ingredients: String) {
         recipeImage.image = image
         recipeTitle.text = title
@@ -21,6 +27,10 @@ class RecipiesTableViewCell: UITableViewCell {
         recipeIngredients.attributedText = ingredients
     }
 
+    /// Create label to the recipeIngredients that has bold "Ingredients: " element
+    ///
+    /// - Parameters:
+    ///   - ingredients: ingredients used in a recipe
     private func createAttributedIngredientsLabel(ingredients: String) -> NSMutableAttributedString {
         let boldText = "Ingredients: "
         let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15)]
