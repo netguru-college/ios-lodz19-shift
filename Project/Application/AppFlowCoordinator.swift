@@ -9,8 +9,11 @@ final class AppFlowCoordinator: FlowCoordinator {
 
     private let window: UIWindow
 
-    init(window: UIWindow) {
+    /// Passing AppDependencies to the AppFlowCoordinator
+    private let appDependencies: AppDependencies
+    init(window: UIWindow, appDependencies: AppDependencies) {
         self.window = window
+        self.appDependencies = appDependencies
     }
 
     func initializeApp() {
@@ -25,14 +28,15 @@ final class AppFlowCoordinator: FlowCoordinator {
 extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
 
     func didSelectNextButton() {
-        let nextViewController = WelcomeViewController()
-        rootViewController.show(nextViewController, sender: nil)
+
     }
 }
 
 extension AppFlowCoordinator: RecipesGeneratorViewControllerDelegate {
     func didFinishTypingIngridients(_ items: [String]) {
-        print("coooo")
-
+        let recipeRequester = RecipeRequester(with: appDependencies.reciepesAPIClient)
+        let recipeTableViewModel = RecipiesTableViewModel(with: recipeRequester, ingredients: items)
+        let nextViewController = RecipiesTableViewController(viewModel: recipeTableViewModel)
+        rootViewController.show(nextViewController, sender: nil)
     }
 }

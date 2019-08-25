@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< .merge_file_PAdcug
 		196617C02312B15900355AE3 /* IngredientsTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 196617BE2312B15900355AE3 /* IngredientsTextView.xib */; };
 		196617C12312B15900355AE3 /* IngredientsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196617BF2312B15900355AE3 /* IngredientsTextView.swift */; };
 		19B1821A2312614B00CB5ECB /* RecepiesGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B182192312614B00CB5ECB /* RecepiesGeneratorViewModel.swift */; };
@@ -17,13 +18,15 @@
 		19BB056E231186D700E4E342 /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB056C231186D700E4E342 /* IngredientCell.swift */; };
 		19BB056F231186D700E4E342 /* IngredientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BB056D231186D700E4E342 /* IngredientCell.xib */; };
 		19BB05722311C6E700E4E342 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB05712311C6E700E4E342 /* NSObject.swift */; };
-		28FBD8E42312988F00B0558B /* (null) in Resources */ = {isa = PBXBuildFile; };
+=======
+		19BB056323115DF000E4E342 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB056223115DF000E4E342 /* UIColor+Extension.swift */; };
 		23AAB1EC23128EFC002D766D /* Recipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AAB1EB23128EFC002D766D /* Recipes.swift */; };
 		23FDF51E2311632D0082DC8B /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF51D2311632D0082DC8B /* AppDependencies.swift */; };
 		23FDF521231164D20082DC8B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF520231164D20082DC8B /* Recipe.swift */; };
 		23FDF5232311679C0082DC8B /* RecipeRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF5222311679C0082DC8B /* RecipeRequester.swift */; };
 		23FDF52723116A880082DC8B /* RecipeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF52623116A880082DC8B /* RecipeRequest.swift */; };
 		28FBD8E32312988F00B0558B /* (null) in Sources */ = {isa = PBXBuildFile; };
+>>>>>>> .merge_file_cira1p
 		28FBD8E42312988F00B0558B /* (null) in Resources */ = {isa = PBXBuildFile; };
 		2E5CB7214B4A78251C20EA48 /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */; };
 		696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE497217635CB005C9FDD /* AppDelegate.swift */; };
@@ -67,17 +70,20 @@
 		19B182192312614B00CB5ECB /* RecepiesGeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepiesGeneratorViewModel.swift; sourceTree = "<group>"; };
 		19B1821B23126BAD00CB5ECB /* IngredientsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsModel.swift; sourceTree = "<group>"; };
 		19BB056223115DF000E4E342 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+<<<<<<< .merge_file_PAdcug
 		19BB0566231178E700E4E342 /* RecipesGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesGeneratorView.swift; sourceTree = "<group>"; };
 		19BB0567231178E700E4E342 /* RecipesGeneratorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesGeneratorView.xib; sourceTree = "<group>"; };
 		19BB056A23117C8200E4E342 /* RecipesGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesGeneratorViewController.swift; sourceTree = "<group>"; };
 		19BB056C231186D700E4E342 /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
 		19BB056D231186D700E4E342 /* IngredientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientCell.xib; sourceTree = "<group>"; };
 		19BB05712311C6E700E4E342 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
+=======
 		23AAB1EB23128EFC002D766D /* Recipes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipes.swift; sourceTree = "<group>"; };
 		23FDF51D2311632D0082DC8B /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
 		23FDF520231164D20082DC8B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		23FDF5222311679C0082DC8B /* RecipeRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequester.swift; sourceTree = "<group>"; };
 		23FDF52623116A880082DC8B /* RecipeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequest.swift; sourceTree = "<group>"; };
+>>>>>>> .merge_file_cira1p
 		5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetguruCollegeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE494217635CB005C9FDD /* NetguruCollegeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetguruCollegeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE497217635CB005C9FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+<<<<<<< .merge_file_PAdcug
 		19BB05652311785000E4E342 /* RecipesGenerator */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,8 +189,7 @@
 				19B1821723125F8900CB5ECB /* NSObjectProtocol.swift */,
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
+=======
 		23FDF51F231164B10082DC8B /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +206,7 @@
 				23AAB1EB23128EFC002D766D /* Recipes.swift */,
 			);
 			path = Models;
+>>>>>>> .merge_file_cira1p
 			sourceTree = "<group>";
 		};
 		4EF6845F21E6435400DA50FC /* Services */ = {
@@ -289,8 +296,11 @@
 		696FE4B9217637D5005C9FDD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< .merge_file_PAdcug
 				19BB05652311785000E4E342 /* RecipesGenerator */,
+=======
 				755EBEE6231161620017A910 /* Recipies */,
+>>>>>>> .merge_file_cira1p
 				E814F7EB2310714E00788FA9 /* Welcome */,
 				E814F7EA2310714500788FA9 /* HelloWorld */,
 			);
@@ -463,8 +473,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28FBD8E42312988F00B0558B /* (null) in Resources */,
+<<<<<<< .merge_file_PAdcug
+=======
 				755EBEF0231169540017A910 /* RecipiesTableViewCell.xib in Resources */,
+>>>>>>> .merge_file_cira1p
 				28FBD8E42312988F00B0558B /* (null) in Resources */,
 				696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */,
 				19BB0569231178E700E4E342 /* RecipesGeneratorView.xib in Resources */,
@@ -535,8 +547,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< .merge_file_PAdcug
+=======
 				23FDF51E2311632D0082DC8B /* AppDependencies.swift in Sources */,
 				28FBD8E32312988F00B0558B /* (null) in Sources */,
+>>>>>>> .merge_file_cira1p
 				E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */,
 				23FDF5232311679C0082DC8B /* RecipeRequester.swift in Sources */,
 				23AAB1EC23128EFC002D766D /* Recipes.swift in Sources */,
