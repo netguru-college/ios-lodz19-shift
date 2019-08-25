@@ -10,11 +10,22 @@ class RecipiesTableViewCell: UITableViewCell {
     @IBOutlet var recipeTitle: UILabel!
     @IBOutlet var recipeIngredients: UILabel!
 
-    func setupCell(with image: UIImage, title: String, ingredients: String) {
+    func setup(with image: UIImage, title: String, ingredients: String) {
 
-        self.recipeImage.image = image
-        self.recipeTitle.text = title
+        recipeImage.image = image
+        recipeTitle.text = title
         let ingredients = createAttributedIngredientsLabel(ingredients: ingredients)
-        self.recipeIngredients.attributedText = ingredients
+        recipeIngredients.attributedText = ingredients
+    }
+    
+    private func createAttributedIngredientsLabel(ingredients: String) -> NSMutableAttributedString {
+        let boldText = "Ingredients: "
+        let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15)]
+        let attributedString = NSMutableAttributedString(string: boldText, attributes: attributes)
+        
+        let normalText = ingredients
+        let normalString = NSMutableAttributedString(string: normalText)
+        attributedString.append(normalString)
+        return attributedString
     }
 }

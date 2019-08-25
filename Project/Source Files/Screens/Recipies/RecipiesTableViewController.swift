@@ -45,26 +45,15 @@ extension RecipiesTableViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipiesTableViewCell",
                                                  for: indexPath) as! RecipiesTableViewCell
 
-        cell.setupCell(with: dataBase[indexPath.row].image,
-                       title: dataBase[indexPath.row].title,
-                       ingredients: dataBase[indexPath.row].ingredients)
+        cell.setup(with: dataBase[indexPath.row].image,
+                   title: dataBase[indexPath.row].title,
+                   ingredients: dataBase[indexPath.row].ingredients)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
 
-}
-
-func createAttributedIngredientsLabel(ingredients: String) -> NSMutableAttributedString {
-    let boldText = "Ingredients: "
-    let attributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15)]
-    let attributedString = NSMutableAttributedString(string: boldText, attributes: attributes)
-
-    let normalText = ingredients
-    let normalString = NSMutableAttributedString(string: normalText)
-    attributedString.append(normalString)
-    return attributedString
 }
 
 public class Recipe {
