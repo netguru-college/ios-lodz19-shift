@@ -27,9 +27,9 @@ Welcome to the **NetguruCollegeApp** project. It is a base application created f
 
 	```bash
 	# over https:
-	git clone https://github.com/netguru/nc-ios.git
+	git clone https://github.com/netguru-college/ios-lodz19-shift.git
 	# or over SSH:
-	git@github.com:netguru/nc-ios.git
+	git@github.com:netguru-college/ios-lodz19-shift.git
 	```
 
 2. Install required Gems:
