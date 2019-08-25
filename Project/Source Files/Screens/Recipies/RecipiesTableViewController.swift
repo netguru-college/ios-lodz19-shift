@@ -47,8 +47,7 @@ extension RecipiesTableViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: RecipiesTableViewCell.identifier,
                                                  for: indexPath) as! RecipiesTableViewCell
 
-        let image = UIImage()
-        cell.setup(with: image,
+        cell.setup(with: URL(string: recepies[indexPath.row].imageURL),
                    title: recepies[indexPath.row].title,
                    ingredients: recepies[indexPath.row].ingredients)
         return cell
@@ -57,7 +56,6 @@ extension RecipiesTableViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
-
     // TODO: Add func tableView - didSelectRow
 }
 
