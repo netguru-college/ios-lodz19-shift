@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		196617C02312B15900355AE3 /* IngredientsTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 196617BE2312B15900355AE3 /* IngredientsTextView.xib */; };
 		196617C12312B15900355AE3 /* IngredientsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196617BF2312B15900355AE3 /* IngredientsTextView.swift */; };
-		19B1821823125F8900CB5ECB /* NSObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B1821723125F8900CB5ECB /* NSObjectProtocol.swift */; };
 		19B1821A2312614B00CB5ECB /* RecepiesGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B182192312614B00CB5ECB /* RecepiesGeneratorViewModel.swift */; };
-		19B1821C23126BAD00CB5ECB /* IngredientsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B1821B23126BAD00CB5ECB /* IngredientsModel.swift */; };
 		19BB056323115DF000E4E342 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB056223115DF000E4E342 /* UIColor+Extension.swift */; };
 		19BB0568231178E700E4E342 /* RecipesGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0566231178E700E4E342 /* RecipesGeneratorView.swift */; };
 		19BB0569231178E700E4E342 /* RecipesGeneratorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BB0567231178E700E4E342 /* RecipesGeneratorView.xib */; };
@@ -156,6 +154,15 @@
 			path = IngredientCell;
 			sourceTree = "<group>";
 		};
+		19F36E5C2312B487003A93A1 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				19B1821B23126BAD00CB5ECB /* IngredientsModel.swift */,
+				19B1821723125F8900CB5ECB /* NSObjectProtocol.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		4EF6845F21E6435400DA50FC /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +200,7 @@
 				696FE495217635CB005C9FDD /* Products */,
 				5EC86D1AC6F92BE513E78EC0 /* Pods */,
 				D78ED9CC3C02DDC356B00910 /* Frameworks */,
+				19F36E5C2312B487003A93A1 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -469,7 +477,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19B1821C23126BAD00CB5ECB /* IngredientsModel.swift in Sources */,
 				28FBD8E32312988F00B0558B /* (null) in Sources */,
 				E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */,
 				19BB056323115DF000E4E342 /* UIColor+Extension.swift in Sources */,
@@ -484,7 +491,6 @@
 				E814F7E82310714300788FA9 /* WelcomeViewController.swift in Sources */,
 				19B1821A2312614B00CB5ECB /* RecepiesGeneratorViewModel.swift in Sources */,
 				E814F7F52310719E00788FA9 /* AppFlowCoordinator.swift in Sources */,
-				19B1821823125F8900CB5ECB /* NSObjectProtocol.swift in Sources */,
 				E814F7ED2310716000788FA9 /* HelloWorldView.swift in Sources */,
 				19BB05722311C6E700E4E342 /* NSObject.swift in Sources */,
 				196617C12312B15900355AE3 /* IngredientsTextView.swift in Sources */,
