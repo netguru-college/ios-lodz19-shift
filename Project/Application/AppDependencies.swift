@@ -9,4 +9,5 @@ import Foundation
 final class AppDependencies {
 
     let reciepesAPIClient = APIClient(withURL: "http://www.recipepuppy.com/api/")
+    let recepiesGeneratorViewModel = RecepiesGeneratorViewModel()
 }

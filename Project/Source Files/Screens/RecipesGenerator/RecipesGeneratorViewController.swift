@@ -17,8 +17,8 @@ final class RecipesGeneratorViewController: UIViewController {
 
     weak var delegate: RecipesGeneratorViewControllerDelegate?
     // MARK: - Functions
-    init(with vm: RecepiesGeneratorViewModel, delegate: RecipesGeneratorViewControllerDelegate) {
-        self.viewModel = vm
+    init(viewModel: RecepiesGeneratorViewModel, delegate: RecipesGeneratorViewControllerDelegate) {
+        self.viewModel = viewModel
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
         self.title = "Ingredients"
