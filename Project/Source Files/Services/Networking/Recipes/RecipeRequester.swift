@@ -5,12 +5,15 @@
 
 import Foundation
 
-/// Requester for Recipe Puppy API
+/// Requester for Recipe Puppy API. Contains method to fetch recipes from API. 
 struct RecipeRequester {
+    
     private let apiClient: APIClient
+    
     init(with apiClient: APIClient) {
         self.apiClient = apiClient
     }
+    
     func fetchRecipes(for ingredients: [String], handler: @escaping (Recipes) -> Void) {
         let request = RecipeRequest(with: ingredients)
         apiClient.sendRequestAndDecode(
