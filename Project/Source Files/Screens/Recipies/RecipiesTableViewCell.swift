@@ -10,15 +10,11 @@ class RecipiesTableViewCell: UITableViewCell {
     @IBOutlet var recipeTitle: UILabel!
     @IBOutlet var recipeIngredients: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func setupCell(with image: UIImage, title: String, ingredients: String) {
 
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        self.recipeImage.image = image
+        self.recipeTitle.text = title
+        let ingredients = createAttributedIngredientsLabel(ingredients: ingredients)
+        self.recipeIngredients.attributedText = ingredients
     }
 }

@@ -44,10 +44,10 @@ extension RecipiesTableViewController: UITableViewDelegate, UITableViewDataSourc
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipiesTableViewCell",
                                                  for: indexPath) as! RecipiesTableViewCell
-        cell.recipeImage.image = dataBase[indexPath.row].image
-        cell.recipeTitle.text = dataBase[indexPath.row].title
-        let ingredients = createAttributedIngredientsLabel(ingredients: dataBase[indexPath.row].ingredients)
-        cell.recipeIngredients.attributedText = ingredients
+
+        cell.setupCell(with: dataBase[indexPath.row].image,
+                       title: dataBase[indexPath.row].title,
+                       ingredients: dataBase[indexPath.row].ingredients)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
