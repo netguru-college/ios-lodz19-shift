@@ -27,7 +27,7 @@ final class AppFlowCoordinator: FlowCoordinator {
 extension AppFlowCoordinator: HelloWorldViewControllerDelegate {
 
     func didSelectNextButton() {
-        let nextViewController = WelcomeViewController()
+        let nextViewController = RecipiesTableViewController()
         rootViewController.show(nextViewController, sender: nil)
     }
 }
