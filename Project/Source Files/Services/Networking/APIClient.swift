@@ -7,7 +7,7 @@ import Foundation
 
 final class APIClient {
 
-    var baseURL: String
+    private var baseURL: String
     let sessionConfiguration = URLSessionConfiguration.default
     lazy var session = URLSession(configuration: sessionConfiguration)
 
