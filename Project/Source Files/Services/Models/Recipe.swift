@@ -14,6 +14,7 @@ struct Recipe {
 }
 
 extension Recipe: Codable {
+
     enum CodingKeys: String, CodingKey {
         case title = "title"
         case imageURL = "thumbnail"
