@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19B1821823125F8900CB5ECB /* NSObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B1821723125F8900CB5ECB /* NSObjectProtocol.swift */; };
 		19BB0568231178E700E4E342 /* RecipesGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0566231178E700E4E342 /* RecipesGeneratorView.swift */; };
 		19BB0569231178E700E4E342 /* RecipesGeneratorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19BB0567231178E700E4E342 /* RecipesGeneratorView.xib */; };
 		19BB056B23117C8200E4E342 /* RecipesGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB056A23117C8200E4E342 /* RecipesGeneratorViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19B1821723125F8900CB5ECB /* NSObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocol.swift; sourceTree = "<group>"; };
 		19BB0566231178E700E4E342 /* RecipesGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesGeneratorView.swift; sourceTree = "<group>"; };
 		19BB0567231178E700E4E342 /* RecipesGeneratorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesGeneratorView.xib; sourceTree = "<group>"; };
 		19BB056A23117C8200E4E342 /* RecipesGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesGeneratorViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				19BB05712311C6E700E4E342 /* NSObject.swift */,
+				19B1821723125F8900CB5ECB /* NSObjectProtocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				E814F7E32310713600788FA9 /* APIClient.swift in Sources */,
 				E814F7E82310714300788FA9 /* WelcomeViewController.swift in Sources */,
 				E814F7F52310719E00788FA9 /* AppFlowCoordinator.swift in Sources */,
+				19B1821823125F8900CB5ECB /* NSObjectProtocol.swift in Sources */,
 				E814F7ED2310716000788FA9 /* HelloWorldView.swift in Sources */,
 				19BB05722311C6E700E4E342 /* NSObject.swift in Sources */,
 				19BB0568231178E700E4E342 /* RecipesGeneratorView.swift in Sources */,
