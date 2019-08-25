@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28FBD8E32312988F00B0558B /* IngredientsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBD8E12312988F00B0558B /* IngredientsTextView.swift */; };
+		28FBD8E42312988F00B0558B /* IngredientsTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28FBD8E22312988F00B0558B /* IngredientsTextView.xib */; };
 		2E5CB7214B4A78251C20EA48 /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */; };
 		696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE497217635CB005C9FDD /* AppDelegate.swift */; };
 		696FE49D217635CB005C9FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49B217635CB005C9FDD /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28FBD8E12312988F00B0558B /* IngredientsTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IngredientsTextView.swift; path = "Project/Source Files/Screens/TextField/IngredientsTextView.swift"; sourceTree = SOURCE_ROOT; };
+		28FBD8E22312988F00B0558B /* IngredientsTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = IngredientsTextView.xib; path = "Project/Source Files/Screens/TextField/IngredientsTextView.xib"; sourceTree = SOURCE_ROOT; };
 		5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetguruCollegeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE494217635CB005C9FDD /* NetguruCollegeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetguruCollegeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE497217635CB005C9FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28FBD8E02312986D00B0558B /* Text field */ = {
+			isa = PBXGroup;
+			children = (
+				28FBD8E12312988F00B0558B /* IngredientsTextView.swift */,
+				28FBD8E22312988F00B0558B /* IngredientsTextView.xib */,
+			);
+			path = "Text field";
+			sourceTree = "<group>";
+		};
 		4EF6845F21E6435400DA50FC /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +178,7 @@
 		696FE4B9217637D5005C9FDD /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				28FBD8E02312986D00B0558B /* Text field */,
 				E814F7EB2310714E00788FA9 /* Welcome */,
 				E814F7EA2310714500788FA9 /* HelloWorld */,
 			);
@@ -324,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28FBD8E42312988F00B0558B /* IngredientsTextView.xib in Resources */,
 				696FE4A2217635D2005C9FDD /* LaunchScreen.storyboard in Resources */,
 				E814F7F32310717400788FA9 /* WelcomeView.xib in Resources */,
 				696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */,
@@ -389,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28FBD8E32312988F00B0558B /* IngredientsTextView.swift in Sources */,
 				E814F7DD2310712B00788FA9 /* FlowCoordinator.swift in Sources */,
 				696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */,
 				E814F7E22310713600788FA9 /* APIMethod.swift in Sources */,
