@@ -12,7 +12,6 @@
 		23FDF521231164D20082DC8B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF520231164D20082DC8B /* Recipe.swift */; };
 		23FDF5232311679C0082DC8B /* RecipeRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF5222311679C0082DC8B /* RecipeRequester.swift */; };
 		23FDF52723116A880082DC8B /* RecipeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF52623116A880082DC8B /* RecipeRequest.swift */; };
-		23FDF52A23117E790082DC8B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FDF52923117E790082DC8B /* Helper.swift */; };
 		2E5CB7214B4A78251C20EA48 /* Pods_NetguruCollegeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */; };
 		696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696FE497217635CB005C9FDD /* AppDelegate.swift */; };
 		696FE49D217635CB005C9FDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 696FE49B217635CB005C9FDD /* Main.storyboard */; };
@@ -49,7 +48,6 @@
 		23FDF520231164D20082DC8B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		23FDF5222311679C0082DC8B /* RecipeRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequester.swift; sourceTree = "<group>"; };
 		23FDF52623116A880082DC8B /* RecipeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRequest.swift; sourceTree = "<group>"; };
-		23FDF52923117E790082DC8B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		5917DB1E95701B4EE6BDDCAF /* Pods_NetguruCollegeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetguruCollegeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE494217635CB005C9FDD /* NetguruCollegeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetguruCollegeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696FE497217635CB005C9FDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 				E814F7E02310713600788FA9 /* APIError.swift */,
 				E814F7DE2310713600788FA9 /* APIMethod.swift */,
 				E814F7E12310713600788FA9 /* APIRequest.swift */,
-				23FDF52923117E790082DC8B /* Helper.swift */,
 				23FDF51F231164B10082DC8B /* Recipes */,
 			);
 			path = Networking;
@@ -431,7 +428,6 @@
 				696FE498217635CB005C9FDD /* AppDelegate.swift in Sources */,
 				E814F7E22310713600788FA9 /* APIMethod.swift in Sources */,
 				E814F7E42310713600788FA9 /* APIError.swift in Sources */,
-				23FDF52A23117E790082DC8B /* Helper.swift in Sources */,
 				E814F7E92310714300788FA9 /* HelloWorldViewController.swift in Sources */,
 				23FDF52723116A880082DC8B /* RecipeRequest.swift in Sources */,
 				E814F7F12310716D00788FA9 /* WelcomeView.swift in Sources */,

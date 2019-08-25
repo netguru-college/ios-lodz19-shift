@@ -12,6 +12,6 @@ final class RecipeRequest: APIRequest {
     }
     var parameters: [String: String]?
     init(with ingredients: [String]) {
-        self.parameters = ["i": Helper().convertToOneString(array: ingredients, with: ",")]
+        self.parameters = ["i": ingredients.joined(separator: ",")]
     }
 }
