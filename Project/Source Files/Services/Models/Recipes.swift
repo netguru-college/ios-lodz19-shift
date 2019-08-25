@@ -3,7 +3,6 @@
 //  NetguruCollegeApp
 //
 
-
 import Foundation
 
 struct Recipes {
@@ -14,7 +13,7 @@ struct Recipes {
 }
 
 extension Recipes: Codable {
-    
+
     enum CodingKeys: String, CodingKey {
         case title
         case version

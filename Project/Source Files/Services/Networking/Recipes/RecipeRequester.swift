@@ -5,23 +5,27 @@
 
 import Foundation
 
-/// Requester for Recipe Puppy API. Contains method to fetch recipes from API. 
+/// Requester for Recipe Puppy API. Contains method to fetch recipes from API.
 struct RecipeRequester {
-    
+
     private let apiClient: APIClient
-    
+
     init(with apiClient: APIClient) {
         self.apiClient = apiClient
     }
-    
-    func fetchRecipes(for ingredients: [String], handler: @escaping (Recipes) -> Void) {
+
+    func fetchRecipes(for ingredients: [String], handler: @escaping (Result<Recipes, Error>) -> Void) {
         let request = RecipeRequest(with: ingredients)
         apiClient.sendRequestAndDecode(
             request: request,
-            success: { (data: Recipes) in
-                handler(data)
-            }) { error in
-                print("Something went wrong: \(error!.localizedDescription)")
-        }
+            success: { data in
+                handler(.success(data))
+            }, failure: { error in
+            guard let error = error else {
+                assert(false, "There is not known error.")
+                return
+            }
+            handler(.failure(error))
+            })
     }
 }
