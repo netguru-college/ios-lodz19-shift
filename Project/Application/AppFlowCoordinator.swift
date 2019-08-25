@@ -10,6 +10,7 @@ final class AppFlowCoordinator: FlowCoordinator {
     private let window: UIWindow
 
     private let appDependencies: AppDependencies
+    
     init(window: UIWindow, appDependencies: AppDependencies) {
         self.window = window
         self.appDependencies = appDependencies
