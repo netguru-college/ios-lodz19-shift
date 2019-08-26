@@ -5,8 +5,9 @@
 
 import UIKit
 
-@IBDesignable
-class IngredientTextField: UITextField {
+/// Just a wraper class around UITextField
+/// It exposes few @IBDesignable properties to allow live styling in storyboards
+@IBDesignable class IngredientTextField: UITextField {
 
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet {

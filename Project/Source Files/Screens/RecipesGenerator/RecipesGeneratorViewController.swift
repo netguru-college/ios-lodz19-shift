@@ -4,43 +4,50 @@
 //
 import UIKit
 
-protocol RecipesGeneratorViewControllerDelegate: class {
+protocol RecipesGeneratorViewControllerDelegate: AnyObject {
     func didFinishTypingIngridients(_ items: [String])
 }
 
 final class RecipesGeneratorViewController: UIViewController {
-    private let viewModel: RecepiesGeneratorViewModel
-    private var customView: RecipesGeneratorView {
-        return view as! RecipesGeneratorView
-    }
-    private var observations = [NSKeyValueObservation]()
 
+    private let viewModel: RecepiesGeneratorViewModel
+    private var customView: RecipesGeneratorView { return view as! RecipesGeneratorView }
     weak var delegate: RecipesGeneratorViewControllerDelegate?
-    // MARK: - Functions
+
     init(viewModel: RecepiesGeneratorViewModel, delegate: RecipesGeneratorViewControllerDelegate) {
         self.viewModel = viewModel
         self.delegate = delegate
         super.init(nibName: nil, bundle: nil)
-        self.title = "Ingredients"
     }
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
     override func loadView() {
         view = RecipesGeneratorView.instanceFromNib()
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        customView.tableView.dataSource = self
+
+        self.title = "Ingredients"
+
         let nib = UINib(nibName: IngredientCell.className, bundle: nil)
         customView.tableView!.register(nib, forCellReuseIdentifier: IngredientCell.className)
+
+        customView.tableView.dataSource = self
         viewModel.delegate = self
         customView.ingredientTextField.delegate = self
 
+        // setup navigation bar
+        navigationController?.navigationBar.barTintColor = UIColor.defaultGreen
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
                                                             target: self,
                                                             action: #selector(self.didTapDoneBarButtonItem))
 
+        // Observe for keyboard notifiactions
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShow(notification:)),
                                                name: UIResponder.keyboardWillShowNotification,
@@ -98,36 +105,44 @@ final class RecipesGeneratorViewController: UIViewController {
 }
 
 extension RecipesGeneratorViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.ingredients.count
     }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: IngredientCell.className) as! IngredientCell
         cell.ingredientLabel.text = viewModel.ingredients[indexPath.item]
         return cell
     }
+
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+
     func tableView(_ tableView: UITableView,
                    commit editingStyle: UITableViewCell.EditingStyle,
                    forRowAt indexPath: IndexPath) {
         viewModel.shouldRemoveIngredient(at: indexPath)
     }
+
 }
 
-// MARK: - Mocked textView
+// Extension for handling ingredientsTextField
 extension RecipesGeneratorViewController: UITextFieldDelegate {
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let ingredient = textField.text, ingredient != "" {
+        if let ingredient = textField.text, !ingredient.isEmpty {
             viewModel.shouldAdd(newIngredient: ingredient)
             textField.text = ""
         }
         return true
     }
+
 }
 
 extension RecipesGeneratorViewController: RecepiesGeneratorViewModelDelegate {
+
     func willChangeData() {
         customView.tableView.beginUpdates()
     }
