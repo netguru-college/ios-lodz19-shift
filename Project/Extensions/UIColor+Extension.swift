@@ -1,21 +1,21 @@
 //
-//  UIColor.swift
+//  UIColor+Extension.swift
 //  NetguruCollegeApp
 //
 import UIKit
 
 extension UIColor {
-    
+
     static let defaultGreen = UIColor.with(hex: 0x2AC503)
     static let defaultDarkGreen = UIColor.with(hex: 0x21A700)
-    
+
     /// Return an instance of UIColors from a given hex number
-    /// Parameter hex: The hex value of the color object.
+    /// - Parameter hex: The hex value of the color object.
     /// Returns: The color object.
     static func with(hex: Int) -> UIColor {
-        return color(red:(hex >> 16) & 0xff, green:(hex >> 8) & 0xff, blue:hex & 0xff)
+        return color(red: (hex >> 16) & 0xff, green: (hex >> 8) & 0xff, blue: hex & 0xff)
     }
-    
+
     /// Initializes and returns a color object using the specified opacity and RGB component values.
     /// - Parameters:
     ///     - red: The red value of the color object.
@@ -27,7 +27,10 @@ extension UIColor {
         assert(red >= 0 && red <= 255, "Invalid red component")
         assert(green >= 0 && green <= 255, "Invalid green component")
         assert(blue >= 0 && blue <= 255, "Invalid blue component")
-        return UIColor(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha) / 255.0)
+        return UIColor(red: CGFloat(red) / 255.0,
+                       green: CGFloat(green) / 255.0,
+                       blue: CGFloat(blue) / 255.0,
+                       alpha: CGFloat(alpha) / 255.0)
     }
-    
+
 }
