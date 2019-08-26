@@ -17,28 +17,41 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RHM-5y-t8e">
-                    <rect key="frame" x="0.0" y="44" width="414" height="498"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="776"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snh-0T-Wzf">
-                    <rect key="frame" x="0.0" y="542" width="414" height="354"/>
+                    <rect key="frame" x="0.0" y="820" width="414" height="76"/>
                     <subviews>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sod-Ar-tUt">
-                            <rect key="frame" x="10" y="10" width="394" height="32"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgA-CX-1md">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sod-Ar-tUt">
+                                    <rect key="frame" x="10" y="5" width="394" height="32"/>
+                                    <color key="backgroundColor" red="0.12941176470588234" green="0.65490196078431373" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="32" id="HST-DH-7ZA"/>
+                                    </constraints>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="0.15543016479999999" blue="0.1824437086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="32" id="HST-DH-7ZA"/>
+                                <constraint firstItem="sod-Ar-tUt" firstAttribute="top" secondItem="PgA-CX-1md" secondAttribute="top" constant="5" id="2Ju-66-TKH"/>
+                                <constraint firstAttribute="trailing" secondItem="sod-Ar-tUt" secondAttribute="trailing" constant="10" id="Ijm-eu-TxQ"/>
+                                <constraint firstItem="sod-Ar-tUt" firstAttribute="leading" secondItem="PgA-CX-1md" secondAttribute="leading" constant="10" id="Zmv-vb-1jV"/>
+                                <constraint firstAttribute="bottom" secondItem="sod-Ar-tUt" secondAttribute="bottom" constant="5" id="uf1-tj-bPn"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
-                        </textView>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="sod-Ar-tUt" firstAttribute="leading" secondItem="snh-0T-Wzf" secondAttribute="leading" constant="10" id="BIj-Fj-n5w"/>
-                        <constraint firstItem="sod-Ar-tUt" firstAttribute="top" secondItem="snh-0T-Wzf" secondAttribute="top" constant="10" id="OR6-sw-Emu"/>
-                        <constraint firstAttribute="trailing" secondItem="sod-Ar-tUt" secondAttribute="trailing" constant="10" id="QH0-sq-deU"/>
+                        <constraint firstItem="PgA-CX-1md" firstAttribute="leading" secondItem="snh-0T-Wzf" secondAttribute="leading" id="bEb-4v-WYr"/>
+                        <constraint firstAttribute="trailing" secondItem="PgA-CX-1md" secondAttribute="trailing" id="hmx-5x-jU1"/>
+                        <constraint firstItem="PgA-CX-1md" firstAttribute="top" secondItem="snh-0T-Wzf" secondAttribute="top" id="v98-hU-uVO"/>
                     </constraints>
                 </view>
             </subviews>
@@ -48,16 +61,15 @@
                 <constraint firstItem="snh-0T-Wzf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="By1-cT-C60"/>
                 <constraint firstAttribute="bottom" secondItem="snh-0T-Wzf" secondAttribute="bottom" id="Rvp-04-065"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RHM-5y-t8e" secondAttribute="trailing" id="a55-rq-Rzh"/>
-                <constraint firstItem="snh-0T-Wzf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-320" id="dJV-rl-WUp"/>
                 <constraint firstItem="snh-0T-Wzf" firstAttribute="top" secondItem="RHM-5y-t8e" secondAttribute="bottom" id="qDU-Yn-cDF"/>
+                <constraint firstItem="PgA-CX-1md" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="rg9-zm-uSi"/>
                 <constraint firstItem="RHM-5y-t8e" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="vN5-2G-a6Q"/>
                 <constraint firstItem="RHM-5y-t8e" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vZm-yc-ZbZ"/>
-                <constraint firstItem="snh-0T-Wzf" firstAttribute="top" secondItem="RHM-5y-t8e" secondAttribute="bottom" id="xdq-xM-zH1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
                 <outlet property="addBar" destination="sod-Ar-tUt" id="2G8-T6-8xN"/>
-                <outlet property="bottomBarConstraint" destination="dJV-rl-WUp" id="5jX-Aj-c2C"/>
+                <outlet property="bottomBarToSafeAreaBottomConstraint" destination="rg9-zm-uSi" id="9hV-GK-79N"/>
                 <outlet property="tableView" destination="RHM-5y-t8e" id="0f7-GN-4PW"/>
             </connections>
         </view>

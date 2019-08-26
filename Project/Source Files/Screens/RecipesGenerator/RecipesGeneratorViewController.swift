@@ -37,28 +37,64 @@ final class RecipesGeneratorViewController: UIViewController {
         viewModel.delegate = self
         customView.addBar.delegate = self
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.didTapDoneBarButtonItem))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
+                                                            target: self,
+                                                            action: #selector(self.didTapDoneBarButtonItem))
 
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow(notification:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide(notification:)),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
     }
-//    @objc func keyboardWillShow(notification: NSNotification) {
-//        guard let userInfo = notification.userInfo else { return }
-//        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-//        let keyboardFrame = keyboardSize.cgRectValue
-//        if self.customView.bottomBarConstraint.constant == 42 {
-//            self.customView.bottomBarConstraint.constant += keyboardFrame.height
-//        }
-//    }
-//    @objc func keyboardWillHide(notification: NSNotification) {
-//        if self.view.frame.origin.y != 0 {
-//            self.customView.bottomBarConstraint.constant = 42
-//        }
-//    }
+
+    @objc func keyboardWillShow(notification: Notification) {
+        keyboard(willBeVisible: true, notification: notification)
+    }
+
+    @objc func keyboardWillHide(notification: Notification) {
+        keyboard(willBeVisible: false, notification: notification)
+    }
+
+    private func keyboard(willBeVisible isShowing: Bool, notification: Notification) {
+
+        if let userInfo = notification.userInfo,
+        let keyboardRect = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue,
+        let rawAnimationCurveValue = (userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as AnyObject).uint32Value,
+        let animationCurve = UIView.AnimationCurve(rawValue: Int(rawAnimationCurveValue) << 16),
+        let animationDuration = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as AnyObject).doubleValue {
+            let convertedKeyboardRect = customView.convert(keyboardRect, from: nil)
+            let heightOffset = self.view.bounds.size.height - convertedKeyboardRect.origin.y
+
+            // Create new OptionSet by combing two options
+            let animationOptions = UIView.AnimationOptions(rawValue: UInt(animationCurve.rawValue)
+                                   | UIView.AnimationOptions.beginFromCurrentState.rawValue)
+
+            switch isShowing {
+            case true:
+                // since a heightOffset already includes height of safeAreaInset.bottom we have to
+                // subtract safeAreaInset.bottom from heightOffset as it is already accouted for
+                customView.bottomBarToSafeAreaBottomConstraint.constant = -heightOffset
+                                                                          + customView.safeAreaInsets.bottom
+            case false:
+                customView.bottomBarToSafeAreaBottomConstraint.constant = -heightOffset
+            }
+
+            UIView.animate(withDuration: animationDuration,
+                           delay: 0,
+                           options: animationOptions,
+                           animations: { self.customView.layoutIfNeeded() })
+
+        }
+    }
 
     @objc private func didTapDoneBarButtonItem() {
         delegate?.didFinishTypingIngridients(viewModel.ingredients)
     }
+
 }
 
 extension RecipesGeneratorViewController: UITableViewDataSource {
