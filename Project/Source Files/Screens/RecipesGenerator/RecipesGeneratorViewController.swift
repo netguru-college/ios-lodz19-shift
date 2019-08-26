@@ -35,7 +35,7 @@ final class RecipesGeneratorViewController: UIViewController {
         let nib = UINib(nibName: IngredientCell.className, bundle: nil)
         customView.tableView!.register(nib, forCellReuseIdentifier: IngredientCell.className)
         viewModel.delegate = self
-        customView.addBar.delegate = self
+        customView.ingredientTextField.delegate = self
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
                                                             target: self,
@@ -117,12 +117,11 @@ extension RecipesGeneratorViewController: UITableViewDataSource {
 }
 
 // MARK: - Mocked textView
-extension RecipesGeneratorViewController: UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if text == "\n" {
-            guard let newIngredient = textView.text  else { return false }
-            textView.text = ""
-            viewModel.shouldAdd(newIngredient: newIngredient)
+extension RecipesGeneratorViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let ingredient = textField.text, ingredient != "" {
+            viewModel.shouldAdd(newIngredient: ingredient)
+            textField.text = ""
         }
         return true
     }

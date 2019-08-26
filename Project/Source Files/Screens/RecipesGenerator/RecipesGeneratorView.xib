@@ -17,37 +17,49 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RHM-5y-t8e">
-                    <rect key="frame" x="0.0" y="44" width="414" height="776"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="768"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snh-0T-Wzf">
-                    <rect key="frame" x="0.0" y="820" width="414" height="76"/>
+                    <rect key="frame" x="0.0" y="812" width="414" height="84"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgA-CX-1md">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                             <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sod-Ar-tUt">
-                                    <rect key="frame" x="10" y="5" width="394" height="32"/>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ingredient" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="IiO-bP-jRJ" customClass="IngredientTextField" customModule="NetguruCollegeApp" customModuleProvider="target">
+                                    <rect key="frame" x="10" y="5" width="394" height="40"/>
                                     <color key="backgroundColor" red="0.12941176470588234" green="0.65490196078431373" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="32" id="HST-DH-7ZA"/>
+                                        <constraint firstAttribute="height" constant="40" id="N00-t0-ohm"/>
                                     </constraints>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="next"/>
-                                </textView>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="continue"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="textLeadingInset">
+                                            <real key="value" value="20"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="Camera"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="rightImageTrailingInset">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
                             </subviews>
-                            <color key="backgroundColor" red="1" green="0.15543016479999999" blue="0.1824437086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.16470588235294117" green="0.77254901960784317" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstItem="sod-Ar-tUt" firstAttribute="top" secondItem="PgA-CX-1md" secondAttribute="top" constant="5" id="2Ju-66-TKH"/>
-                                <constraint firstAttribute="trailing" secondItem="sod-Ar-tUt" secondAttribute="trailing" constant="10" id="Ijm-eu-TxQ"/>
-                                <constraint firstItem="sod-Ar-tUt" firstAttribute="leading" secondItem="PgA-CX-1md" secondAttribute="leading" constant="10" id="Zmv-vb-1jV"/>
-                                <constraint firstAttribute="bottom" secondItem="sod-Ar-tUt" secondAttribute="bottom" constant="5" id="uf1-tj-bPn"/>
+                                <constraint firstAttribute="bottom" secondItem="IiO-bP-jRJ" secondAttribute="bottom" constant="5" id="coH-De-jal"/>
+                                <constraint firstAttribute="trailing" secondItem="IiO-bP-jRJ" secondAttribute="trailing" constant="10" id="qHZ-fU-t8F"/>
+                                <constraint firstItem="IiO-bP-jRJ" firstAttribute="leading" secondItem="PgA-CX-1md" secondAttribute="leading" constant="10" id="ugT-fS-xWV"/>
+                                <constraint firstItem="IiO-bP-jRJ" firstAttribute="top" secondItem="PgA-CX-1md" secondAttribute="top" constant="5" id="zTI-ag-U6M"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.16470588235294117" green="0.77254901960784317" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="PgA-CX-1md" firstAttribute="leading" secondItem="snh-0T-Wzf" secondAttribute="leading" id="bEb-4v-WYr"/>
                         <constraint firstAttribute="trailing" secondItem="PgA-CX-1md" secondAttribute="trailing" id="hmx-5x-jU1"/>
@@ -68,10 +80,13 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
-                <outlet property="addBar" destination="sod-Ar-tUt" id="2G8-T6-8xN"/>
                 <outlet property="bottomBarToSafeAreaBottomConstraint" destination="rg9-zm-uSi" id="9hV-GK-79N"/>
+                <outlet property="ingredientTextField" destination="IiO-bP-jRJ" id="K8X-d3-8Qy"/>
                 <outlet property="tableView" destination="RHM-5y-t8e" id="0f7-GN-4PW"/>
             </connections>
         </view>
     </objects>
+    <resources>
+        <image name="Camera" width="20" height="20"/>
+    </resources>
 </document>

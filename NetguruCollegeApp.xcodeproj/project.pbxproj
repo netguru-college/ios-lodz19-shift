@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		196617C02312B15900355AE3 /* IngredientsTextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 196617BE2312B15900355AE3 /* IngredientsTextView.xib */; };
-		196617C12312B15900355AE3 /* IngredientsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196617BF2312B15900355AE3 /* IngredientsTextView.swift */; };
+		194D61792314865A006305D5 /* IngredientTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194D61782314865A006305D5 /* IngredientTextField.swift */; };
 		19B1821A2312614B00CB5ECB /* RecepiesGeneratorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B182192312614B00CB5ECB /* RecepiesGeneratorViewModel.swift */; };
 		19BB056323115DF000E4E342 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB056223115DF000E4E342 /* UIColor+Extension.swift */; };
 		19BB0568231178E700E4E342 /* RecipesGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BB0566231178E700E4E342 /* RecipesGeneratorView.swift */; };
@@ -58,8 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		196617BE2312B15900355AE3 /* IngredientsTextView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IngredientsTextView.xib; sourceTree = "<group>"; };
-		196617BF2312B15900355AE3 /* IngredientsTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsTextView.swift; sourceTree = "<group>"; };
+		194D61782314865A006305D5 /* IngredientTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTextField.swift; sourceTree = "<group>"; };
 		19B1821723125F8900CB5ECB /* NSObjectProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocol.swift; sourceTree = "<group>"; };
 		19B182192312614B00CB5ECB /* RecepiesGeneratorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecepiesGeneratorViewModel.swift; sourceTree = "<group>"; };
 		19B1821B23126BAD00CB5ECB /* IngredientsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsModel.swift; sourceTree = "<group>"; };
@@ -125,15 +123,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		196617BD2312B15900355AE3 /* TextField */ = {
-			isa = PBXGroup;
-			children = (
-				196617BE2312B15900355AE3 /* IngredientsTextView.xib */,
-				196617BF2312B15900355AE3 /* IngredientsTextView.swift */,
-			);
-			path = TextField;
-			sourceTree = "<group>";
-		};
 		19BB056123115D4B00E4E342 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,12 +134,12 @@
 		19BB05652311785000E4E342 /* RecipesGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				196617BD2312B15900355AE3 /* TextField */,
 				19BB05732311C79700E4E342 /* IngredientCell */,
 				19BB056A23117C8200E4E342 /* RecipesGeneratorViewController.swift */,
 				19BB0566231178E700E4E342 /* RecipesGeneratorView.swift */,
 				19BB0567231178E700E4E342 /* RecipesGeneratorView.xib */,
 				19B182192312614B00CB5ECB /* RecepiesGeneratorViewModel.swift */,
+				194D61782314865A006305D5 /* IngredientTextField.swift */,
 			);
 			path = RecipesGenerator;
 			sourceTree = "<group>";
@@ -467,7 +456,6 @@
 				755EBEE8231161E70017A910 /* RecipiesTableViewController.xib in Resources */,
 				696FE49F217635D2005C9FDD /* Assets.xcassets in Resources */,
 				E814F7EF2310716700788FA9 /* HelloWorldView.xib in Resources */,
-				196617C02312B15900355AE3 /* IngredientsTextView.xib in Resources */,
 				19BB056F231186D700E4E342 /* IngredientCell.xib in Resources */,
 				696FE49D217635CB005C9FDD /* Main.storyboard in Resources */,
 			);
@@ -544,6 +532,7 @@
 				E814F7E92310714300788FA9 /* HelloWorldViewController.swift in Sources */,
 				23FDF52723116A880082DC8B /* RecipeRequest.swift in Sources */,
 				E814F7F12310716D00788FA9 /* WelcomeView.swift in Sources */,
+				194D61792314865A006305D5 /* IngredientTextField.swift in Sources */,
 				19BB056E231186D700E4E342 /* IngredientCell.swift in Sources */,
 				E814F7E52310713600788FA9 /* APIRequest.swift in Sources */,
 				E814F7E32310713600788FA9 /* APIClient.swift in Sources */,
@@ -553,7 +542,6 @@
 				755EBEEA231162210017A910 /* RecipiesTableViewController.swift in Sources */,
 				E814F7ED2310716000788FA9 /* HelloWorldView.swift in Sources */,
 				19BB05722311C6E700E4E342 /* NSObject.swift in Sources */,
-				196617C12312B15900355AE3 /* IngredientsTextView.swift in Sources */,
 				19BB0568231178E700E4E342 /* RecipesGeneratorView.swift in Sources */,
 				19BB056B23117C8200E4E342 /* RecipesGeneratorViewController.swift in Sources */,
 			);
