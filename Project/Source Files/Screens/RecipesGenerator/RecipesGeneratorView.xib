@@ -28,7 +28,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ingredient" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="IiO-bP-jRJ" customClass="IngredientTextField" customModule="NetguruCollegeApp" customModuleProvider="target">
-                                    <rect key="frame" x="10" y="5" width="394" height="40"/>
+                                    <rect key="frame" x="10" y="5" width="346" height="40"/>
                                     <color key="backgroundColor" red="0.12941176470588234" green="0.65490196078431373" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="N00-t0-ohm"/>
@@ -43,17 +43,23 @@
                                         <userDefinedRuntimeAttribute type="number" keyPath="textLeadingInset">
                                             <real key="value" value="20"/>
                                         </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="Camera"/>
-                                        <userDefinedRuntimeAttribute type="number" keyPath="rightImageTrailingInset">
-                                            <real key="value" value="15"/>
-                                        </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scan" translatesAutoresizingMaskIntoConstraints="NO" id="KgM-De-ULt">
+                                    <rect key="frame" x="371" y="5" width="28" height="40"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="28" id="Pui-gm-LKF"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" red="0.16470588235294117" green="0.77254901960784317" blue="0.011764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstItem="KgM-De-ULt" firstAttribute="top" secondItem="PgA-CX-1md" secondAttribute="top" constant="5" id="96P-SC-rdb"/>
+                                <constraint firstAttribute="trailing" secondItem="KgM-De-ULt" secondAttribute="trailing" constant="15" id="bVJ-5c-Ud0"/>
                                 <constraint firstAttribute="bottom" secondItem="IiO-bP-jRJ" secondAttribute="bottom" constant="5" id="coH-De-jal"/>
-                                <constraint firstAttribute="trailing" secondItem="IiO-bP-jRJ" secondAttribute="trailing" constant="10" id="qHZ-fU-t8F"/>
+                                <constraint firstItem="KgM-De-ULt" firstAttribute="leading" secondItem="IiO-bP-jRJ" secondAttribute="trailing" constant="15" id="iZG-55-Pfc"/>
+                                <constraint firstAttribute="bottom" secondItem="KgM-De-ULt" secondAttribute="bottom" constant="5" id="oMM-u6-mIW"/>
                                 <constraint firstItem="IiO-bP-jRJ" firstAttribute="leading" secondItem="PgA-CX-1md" secondAttribute="leading" constant="10" id="ugT-fS-xWV"/>
                                 <constraint firstItem="IiO-bP-jRJ" firstAttribute="top" secondItem="PgA-CX-1md" secondAttribute="top" constant="5" id="zTI-ag-U6M"/>
                             </constraints>
@@ -87,6 +93,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Camera" width="20" height="20"/>
+        <image name="Scan" width="29" height="29"/>
     </resources>
 </document>

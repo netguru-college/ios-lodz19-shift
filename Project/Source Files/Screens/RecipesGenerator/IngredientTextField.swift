@@ -21,26 +21,6 @@ class IngredientTextField: UITextField {
         }
     }
 
-    @IBInspectable var rightImage: UIImage? {
-        didSet {
-            let imageView = UIImageView(image: rightImage)
-            imageView.contentMode = .left
-            self.rightView = imageView
-            self.rightViewMode = .always
-        }
-    }
-
-    @IBInspectable var rightImageTrailingInset: CGFloat = 6 {
-        didSet {
-            guard let rightImage = self.rightView else { return }
-            rightImage.frame = rightImage.frame.inset(by: UIEdgeInsets(top: 0,
-                                                                       left: 0,
-                                                                       bottom: 0,
-                                                                       right: -rightImageTrailingInset))
-            layoutIfNeeded()
-        }
-    }
-
     // update placeholder position
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: textLeadingInset, dy: 0)
