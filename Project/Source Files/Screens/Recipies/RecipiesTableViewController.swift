@@ -9,19 +9,23 @@ class RecipiesTableViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
 
-    // TODO: Remove when the API implementation will be ready.
-    var recepies = [
-        Recipe(image: UIImage(named: "TestingImage")!,
-               title: "Let's cook something",
-               ingredients: "Garlic, beef, salt, Garlic, beef, salt, Garlic, beef, salt"),
-        Recipe(image: UIImage(named: "TestingImage2")!,
-               title: "Another cool recipe",
-               ingredients: "Mango, Melon, Water")
-    ]
+    let viewModel: RecipiesTableViewModel
 
+    var recepies: [Recipe] = []
+
+    init(viewModel: RecipiesTableViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+        viewModel.delegate = self
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        viewModel.fetchRecipies()
     }
     private func setupView() {
         tableView.register(UINib(nibName: RecipiesTableViewCell.identifier, bundle: nil),
@@ -43,7 +47,7 @@ extension RecipiesTableViewController: UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: RecipiesTableViewCell.identifier,
                                                  for: indexPath) as! RecipiesTableViewCell
 
-        cell.setup(with: recepies[indexPath.row].image,
+        cell.setup(with: URL(string: recepies[indexPath.row].imageURL),
                    title: recepies[indexPath.row].title,
                    ingredients: recepies[indexPath.row].ingredients)
         return cell
@@ -52,18 +56,12 @@ extension RecipiesTableViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
-
     // TODO: Add func tableView - didSelectRow
 }
 
-// TODO: Remove when the API implementation will be ready.
-public class Recipe {
-    public var image: UIImage
-    public var title: String
-    public var ingredients: String
-    init(image: UIImage, title: String, ingredients: String) {
-        self.image = image
-        self.title = title
-        self.ingredients = ingredients
+extension RecipiesTableViewController: RecipiesTableViewModelDelegate {
+    func didFetchRecipies(_ recipies: [Recipe]) {
+        self.recepies = recipies
+        tableView.reloadData()
     }
 }
